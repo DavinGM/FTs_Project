@@ -1,0 +1,458 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #007bff; /* Biru cerah */
+    --secondary-color: #6c757d; /* Abu-abu */
+    --text-dark: #343a40;
+    --text-light: #f8f9fa;
+    --bg-light: #ffffff;
+    --bg-dark: #212529;
+    --font-family: 'Arial', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #f4f7f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Tombol Dasar */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+.btn-nav {
+    padding: 8px 15px;
+}
+
+.btn-large {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+}
+
+/* ======================== NAVBAR MODERN ======================== */
+.navbar {
+    background-color: var(--bg-light);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    color: var(--primary-color);
+}
+
+.nav-toggle {
+    display: none; /* Sembunyikan di desktop */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+/* ======================== HERO SECTION ======================== */
+.hero-section {
+    background-color: var(--bg-light);
+    padding: 100px 0;
+    /* Membuat layout dua kolom */
+}
+
+.hero-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-content {
+    max-width: 55%;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.hero-content .tagline {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+.cta-group a {
+    margin-right: 15px;
+}
+
+.hero-visual {
+    max-width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.placeholder-visual {
+    background-color: #e9ecef;
+    border-radius: 10px;
+    padding: 50px;
+    text-align: center;
+    color: var(--primary-color);
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.placeholder-visual .icon-large {
+    font-size: 5rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* ======================== FOOTER CTA ======================== */
+.footer-cta-section {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.footer-cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* ======================== FOOTER LENGKAP ======================== */
+.footer {
+    background-color: var(--bg-dark);
+    color: #adb5bd;
+    padding-top: 50px;
+}
+
+.footer .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* Pembagian kolom */
+    gap: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #495057;
+}
+
+.footer h3 {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li a {
+    color: #adb5bd;
+    text-decoration: none;
+    line-height: 2.2;
+    transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+    color: var(--primary-color);
+}
+
+.social-icons a {
+    color: var(--text-light);
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    color: #adb5bd;
+}
+
+/* ======================== MEDIA QUERIES (Responsif) ======================== */
+@media (max-width: 768px) {
+    /* Navbar */
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 60px; /* Di bawah navbar */
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-light);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: none;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+    }
+
+    .nav-menu ul li {
+        margin: 10px 0;
+    }
+
+    .nav-menu ul li a {
+        margin-left: 0;
+        display: block;
+        padding: 10px 0;
+    }
+
+    /* Hero Section */
+    .hero-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content, .hero-visual {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-visual {
+        order: -1; /* Pindahkan visual ke atas di mobile */
+        margin-bottom: 30px;
+    }
+
+    .cta-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .cta-group a {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social-icons {
+        margin-top: 15px;
+    }
+}
+
+/* ... CSS yang sudah Anda miliki ... */
+
+/* Tambahkan Gaya untuk Section Card Baru */
+.profile-cards {
+    padding: 80px 0;
+    background-color: #ffffff; /* Warna latar belakang putih */
+}
+
+.profile-cards h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efek melayang saat dihover */
+}
+
+/* Gaya untuk Gambar Profil */
+.card-img-top {
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+}
+
+/* Penyesuaian Tombol di Card */
+.card-body .btn-dark {
+    background-color: var(--bg-dark);
+    border-color: var(--bg-dark);
+}
+
+.card-body .btn-dark:hover {
+    background-color: #000000;
+}
+
+/* Pastikan Font Awesome (fa) dan Material Icons (bi) memiliki margin yang benar di footer */
+.footer-col.links ul li a {
+    display: flex; /* Memastikan ikon dan teks sejajar */
+    align-items: center;
+}
+
+.footer-col.links ul li a i {
+    font-size: 1.1em;
+}
+
+/* ... Lanjutkan dengan CSS yang sudah ada ... */
+
+
+/* =======================================
+   3. HERO SECTION (DENGAN BACKGROUND IMAGE)
+   ======================================= */
+.hero-section {
+    /* Ganti URL ini dengan path gambar latar belakang Anda */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://apps.enigmacamp.com/cms//uploads/Programmer_05d9633522.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-light); /* Mengubah warna teks menjadi putih */
+    padding: 120px 0;
+}
+
+/* Pastikan teks di hero berwarna terang */
+.hero-content h1,
+.hero-content .tagline {
+    color: var(--text-light);
+}
+
+/* Memperbaiki visual di Hero section agar menyatu dengan BG gelap */
+.hero-visual {
+    /* Menghapus background yang kontras dari CSS sebelumnya */
+    background-color: transparent; 
+    box-shadow: none;
+    min-height: 250px; /* Sedikit dikecilkan agar fokus pada teks */
+}
+
+/* Ubah tombol sekunder agar terlihat jelas di BG gelap */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-light); /* Teks putih */
+    border: 2px solid var(--text-light); /* Garis batas putih */
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-light); /* BG putih saat hover */
+    color: var(--primary-color); /* Teks biru saat hover */
+}
+
+
+/* =======================================
+   4. PROFILE CARDS SECTION (BACKGROUND HITAM)
+   ======================================= */
+.profile-cards {
+    padding: 100px 0;
+    background-color: var(--bg-dark); /* Latar Belakang Hitam */
+    color: var(--text-light); /* Mengubah warna teks utama menjadi terang */
+}
+
+.profile-cards h2 {
+    color: var(--text-light); /* Judul berwarna terang */
+}
+
+/* Memberi gaya pada Card agar kontras dengan BG hitam */
+.card {
+    background-color: var(--bg-light); /* Kartu berwarna putih */
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Bayangan lebih gelap */
+}
+
+/* Memberi warna teks di dalam kartu */
+.card-title,
+.card-text {
+    color: var(--text-dark);
+}
+
+/* Mengubah warna border foto agar menonjol */
+.card-img-top {
+    border: 4px solid var(--primary-color); 
+    box-shadow: 0 0 0 2px var(--bg-dark); /* Efek cincin luar gelap */
+}
+
+/* Pastikan link di dalam card juga terbaca */
+.card-body a {
+    text-decoration: none;
+}
