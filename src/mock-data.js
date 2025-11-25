@@ -7,11 +7,11 @@ export const teamMembers = [
     github: "https://github.com/davingm"
   },
   {
-    name: "Fakhri",
-    role: "Backend Developer & API.",
-    photo: "https://avatars.githubusercontent.com/u/228840381?v=4",
+    name: "Rehan",
+    role: "FULL Stack Developer.",
+    photo: "https://avatars.githubusercontent.com/u/218329504?v=4",
     portfolio: "#",
-    github: "https://github.com/Fakhri-8G"
+    github: "https://github.com/Rehan-Ramadhan"
   },
   {
     name: "Raditia",
@@ -28,12 +28,19 @@ export const teamMembers = [
     github: "https://github.com/Destkaa"
   },
   {
-    name: "Kina",
+    name: "Nairha",
     role: "CEO NLFTs Company",
     photo: "https://avatars.githubusercontent.com/u/204519754?v=4",
     portfolio: "https://nairhacan.github.io/my_portofolio",
     github: "https://github.com/nairhacan",
     roleStyled: true // 👑 optional kalau kamu mau styling khusus
+  },
+  {
+    name: "Erga",
+    role: "Project Manager",
+    photo: "https://avatars.githubusercontent.com/u/237564897?v=4",
+    portfolio: "#",
+    github: "https://github.com/Kaichou349"
   },
   {
     name: "Fazly",
@@ -50,11 +57,11 @@ export const teamMembers = [
     github: "https://github.com/R1ZF4L"
   },
   {
-    name: "Erga",
-    role: "Project Manager",
-    photo: "https://avatars.githubusercontent.com/u/237564897?v=4",
+    name: "Fakhri",
+    role: "Backend Developer & API.",
+    photo: "https://avatars.githubusercontent.com/u/228840381?v=4",
     portfolio: "#",
-    github: "https://github.com/Kaichou349"
+    github: "https://github.com/Fakhri-8G"
   },
   {
     name: "Ilman",
@@ -64,18 +71,18 @@ export const teamMembers = [
     github: "https://github.com/ilman91"
   },
   {
-    name: "Rehan",
-    role: "FULL Stack Developer.",
-    photo: "https://avatars.githubusercontent.com/u/218329504?v=4",
-    portfolio: "#",
-    github: "https://github.com/Rehan-Ramadhan"
-  },
-  {
     name: "Haitsam",
     role: "Cyber Security.",
     photo: "https://avatars.githubusercontent.com/u/232498781?v=4",
     portfolio: "#",
-    github: "https://github.com/kksam-ctruk"
+    github: "https://github.com/kksam-ctrk"
+  },
+    {
+    name: "Nafis",
+    role: "Frontend Developer.",
+    photo: "https://avatars.githubusercontent.com/u/182593937?v=4",
+    portfolio: "#",
+    github: "https://github.com/muhammadNafeezKh"
   },
   {
     name: "Ghaizan",
@@ -101,9 +108,9 @@ export const teamMembers = [
     {
     name: "Ali",
     role: "Frontend Developer.",
-    photo: "https://imgs.search.brave.com/Czc4iQD5qMftOwHO_p_uKmz6ih04EA5WQ2SiBk97lmQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/aWNvbnM4LmNvbS9j/b2xvci8xMjAwL2dp/dGh1Yi0tdjEuanBn",
+    photo: "https://avatars.githubusercontent.com/u/225398165?v=4",
     portfolio: "#", 
-    github: "https://github.com"
+    github: "https://github.com/Ahmad-daniyal"
   },
     {
     name: "Hanif",

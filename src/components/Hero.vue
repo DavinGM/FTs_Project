@@ -1,167 +1,50 @@
+
 <template>
-    <main class="hero-section" ref="heroSection">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Selamat Datang</h1>
-                <p class="tagline">{{ currentTagline }}</p> 
-                
-                <div class="cta-group">
-                    <a href="not_fund.html" 
-                        class="btn btn-primary-outline border"
-                        ref="ctaButton"
-                        @mouseover="changeCtaColor" 
-                        @mouseleave="resetCtaColor">
-                        Dowload My FTs <i class="bi bi-windows"></i>
-                    </a>
-                </div>
+    <section class="relative h-screen bg-cover bg-center" style="background-image: url('/ind.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent"></div>
+    
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white p-6">
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 animate-fadeInUp">
+                Percayakan Bisnis Anda Pada Kami
+            </h1>
+    
+            <p class="font-bold text-xl md:text-2xl text-[#34d399] max-w-3xl mb-10 opacity-90 animate-fadeInUp delay-100">
+                Jelajahi solusi inovatif kami yang dirancang untuk mengubah ide besar Anda menjadi kenyataan yang sukses dan terukur.
+            </p>
+    
+            <div class="flex flex-col sm:flex-row gap-4 animate-fadeInUp delay-200">
+                <a href="#" class="px-8 py-3 text-lg font-semibold rounded-full bg-indigo-600 hover:bg-indigo-700 transition duration-300 shadow-lg transform hover:scale-105">
+                    Mulai Sekarang →
+                </a>
+                <a href="#" class="px-8 py-3 text-lg font-semibold rounded-full border border-white text-white hover:bg-white hover:text-gray-900 transition duration-300 transform hover:scale-105">
+                    Lihat Demo
+                </a>
             </div>
+    
         </div>
-    </main>
-</template>
+    </section>
 
-<script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
-
-const taglines = [
-    "Pengembang Independen dari Proyek FTs. Berfokus pada pengembangan Frontend yang modern dan kolaboratif.",
-    "Buat UI/UX Hebat. Kembangkan aplikasi dengan kecepatan cahaya.",
-    "Solusi Responsif untuk semua perangkat. Tanpa Batasan!"
-];
-const currentTaglineIndex = ref(0);
-const currentTagline = ref(taglines[0]);
-let taglineInterval;
-
-const startTaglineRotation = () => {
-    taglineInterval = setInterval(() => {
-        currentTaglineIndex.value = (currentTaglineIndex.value + 1) % taglines.length;
-        currentTagline.value = taglines[currentTaglineIndex.value];
-    }, 4000); // Ganti setiap 4 detik
-};
-
-
-// V2: Efek Parallax Ringan pada Scroll
-const heroSection = ref(null);
-const heroVisual = ref(null);
-
-const handleScrollParallax = () => {
-    if (heroSection.value && heroVisual.value) {
-        // Mendapatkan posisi scroll dari atas halaman
-        const scrollY = window.scrollY;
-        
-        // Menghitung pergerakan visual (misalnya 10% dari scroll)
-        const visualMove = scrollY * 0.1;
-        
-        // Mengubah posisi visual (hanya Y axis) melalui style.transform
-        // Ini adalah murni JavaScript yang memanipulasi DOM Style
-        heroVisual.value.style.transform = `translateY(${visualMove}px)`;
-        
-        // Opsional: Buat teks bergerak sedikit ke bawah
-        if (heroVisual.value.previousElementSibling) {
-             heroVisual.value.previousElementSibling.style.transform = `translateY(${visualMove * 0.05}px)`;
-        }
-    }
-};
-
-onMounted(() => {
-    startTaglineRotation();
-    window.addEventListener('scroll', handleScrollParallax);
-});
-
-onUnmounted(() => {
-    clearInterval(taglineInterval);
-    window.removeEventListener('scroll', handleScrollParallax);
-});
-
-
-// V3: Tombol yang Berubah Warna Acak Saat Hover
-const ctaButton = ref(null);
-let originalBackgroundColor = 'initial'; // Akan diinisialisasi saat mounted
-
-const getRandomColor = () => {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 1)];
-    }
-    return color;
-};
-
-const changeCtaColor = () => {
-    if (ctaButton.value) {
-        // Simpan warna asli sebelum diubah
-        if (originalBackgroundColor === 'initial') {
-            originalBackgroundColor = window.getComputedStyle(ctaButton.value).backgroundColor;
-        }
-        
-        // Set warna acak (hanya background)
-        ctaButton.value.style.backgroundColor = getRandomColor();
-        // Opsional: Buat transisi halus agar tidak 'shocking' (tanpa CSS tambahan)
-        ctaButton.value.style.transition = 'background-color 0.1s ease-out';
-    }
-};
-
-const resetCtaColor = () => {
-    if (ctaButton.value) {
-        // Kembalikan ke warna asli yang didapatkan dari CSS
-        ctaButton.value.style.backgroundColor = originalBackgroundColor;
-        // Kembalikan transisi ke nilai yang lebih panjang (atau hapus)
-        ctaButton.value.style.transition = 'background-color 0.3s ease-in';
-    }
-};
-
-</script>
-
+</template>    
 <style scoped>
-/*
-    CATATAN: CSS yang Anda berikan sebelumnya TIDAK BOLEH DIUBAH!
-    Ini adalah asumsi gaya CSS dasar yang mungkin sudah ada,
-    agar interaksi JS bisa bekerja:
-*/
-.hero-section {
-    padding: 100px 0;
-    min-height: 500px;
-    background-color: #f5f5f5; /* Asumsi latar belakang */
-}
-
-.container {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.hero-content {
-    flex: 1;
-}
-
-.hero-visual {
-    flex: 1;
-    transition: transform 0.1s ease-out; 
-}
-
-h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-.tagline {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.btn-primary {
-    padding: 12px 25px;
-    border-radius: 6px;
-    background-color: blue;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease; 
-}
-
-.bi {
-    margin-left: 8px;
-}
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .animate-fadeInUp {
+        animation: fadeInUp 1s ease-out forwards;
+        opacity: 0; /* Mulai dengan opacity 0 */
+    }
+    .delay-100 {
+        animation-delay: 0.1s;
+    }
+    .delay-200 {
+        animation-delay: 0.2s;
+    }
 </style>
