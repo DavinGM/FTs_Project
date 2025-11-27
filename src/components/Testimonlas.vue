@@ -95,7 +95,7 @@
         data-aos-delay="150"
       >
         <p class="text-[17px] leading-relaxed text-gray-200 mb-8">
-          “ balancing performance, flexibility, and simplicity—while ensuring a great developer experience.”
+          “Awal yang buruk bukan berarti akhir yang buruk... ,NLFTs bukan sekedar Komunitas kita bisa belajar dari segi teknologi,Logika yang kuat dan belajar lebih baik dari sebelumnya”
         </p>
         <div>
           <p class="text-gray-400 text-sm font-semibold">Habsy</p>
