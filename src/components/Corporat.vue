@@ -121,6 +121,13 @@
   </section>
 </template>
 
+<style scoped>
+
+</style>
+
+
+
+
 
 <script setup>
 import { onMounted, ref } from "vue";

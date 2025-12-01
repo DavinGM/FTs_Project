@@ -17,7 +17,7 @@ export const teamMembers = [
     name: "Raditia",
     role: "Full Stack Developer.",
     photo: "https://avatars.githubusercontent.com/u/226198461?v=4",
-    portfolio: "#",
+    portfolio: "https://radiedtya.github.io/My-Portfolio/",
     github: "https://github.com/Radiedtya"
   },
   {
